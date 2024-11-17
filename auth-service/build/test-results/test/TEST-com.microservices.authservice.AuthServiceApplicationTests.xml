@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.microservices.authservice.AuthServiceApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-11-13T14:02:31" hostname="ASUS_BINHPHAM" time="0.766">
+  <properties/>
+  <testcase name="contextLoads()" classname="com.microservices.authservice.AuthServiceApplicationTests" time="0.766"/>
+  <system-out><![CDATA[21:02:28.582 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.microservices.authservice.AuthServiceApplicationTests]: AuthServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+21:02:28.692 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.microservices.authservice.AuthServiceApplication for test class com.microservices.authservice.AuthServiceApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.5)
+
+2024-11-13T21:02:29.256+07:00  INFO 21140 --- [auth-service] [    Test worker] c.m.a.AuthServiceApplicationTests        : Starting AuthServiceApplicationTests using Java 21.0.5 with PID 21140 (started by binhpham in D:\0_project\microservices\auth-service)
+2024-11-13T21:02:29.256+07:00  INFO 21140 --- [auth-service] [    Test worker] c.m.a.AuthServiceApplicationTests        : No active profile set, falling back to 1 default profile: "default"
+2024-11-13T21:02:30.008+07:00  INFO 21140 --- [auth-service] [    Test worker] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d496c383-e4aa-34a2-ba99-fadd04ebd59e
+2024-11-13T21:02:30.071+07:00  WARN 21140 --- [auth-service] [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-11-13T21:02:30.086+07:00  WARN 21140 --- [auth-service] [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2024-11-13T21:02:31.122+07:00  INFO 21140 --- [auth-service] [    Test worker] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2024-11-13T21:02:31.169+07:00  WARN 21140 --- [auth-service] [    Test worker] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-11-13T21:02:31.200+07:00  INFO 21140 --- [auth-service] [    Test worker] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2024-11-13T21:02:31.232+07:00  INFO 21140 --- [auth-service] [    Test worker] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2024-11-13T21:02:31.232+07:00  INFO 21140 --- [auth-service] [    Test worker] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2024-11-13T21:02:31.247+07:00  INFO 21140 --- [auth-service] [    Test worker] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2024-11-13T21:02:31.247+07:00  INFO 21140 --- [auth-service] [    Test worker] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2024-11-13T21:02:31.247+07:00  INFO 21140 --- [auth-service] [    Test worker] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2024-11-13T21:02:31.247+07:00  INFO 21140 --- [auth-service] [    Test worker] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2024-11-13T21:02:31.247+07:00  INFO 21140 --- [auth-service] [    Test worker] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2024-11-13T21:02:31.247+07:00  INFO 21140 --- [auth-service] [    Test worker] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2024-11-13T21:02:31.247+07:00  INFO 21140 --- [auth-service] [    Test worker] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2024-11-13T21:02:31.655+07:00  INFO 21140 --- [auth-service] [    Test worker] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2024-11-13T21:02:31.655+07:00  INFO 21140 --- [auth-service] [    Test worker] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2024-11-13T21:02:31.655+07:00  INFO 21140 --- [auth-service] [    Test worker] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2024-11-13T21:02:31.672+07:00  INFO 21140 --- [auth-service] [    Test worker] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1731506551672 with initial instances count: 0
+2024-11-13T21:02:31.672+07:00  INFO 21140 --- [auth-service] [    Test worker] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application AUTH-SERVICE with eureka with status UP
+2024-11-13T21:02:31.672+07:00  INFO 21140 --- [auth-service] [    Test worker] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1731506551672, current=UP, previous=STARTING]
+2024-11-13T21:02:31.672+07:00  INFO 21140 --- [auth-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/Asus_BinhPham.mshome.net:auth-service:8082: registering service...
+2024-11-13T21:02:31.702+07:00  INFO 21140 --- [auth-service] [    Test worker] c.m.a.AuthServiceApplicationTests        : Started AuthServiceApplicationTests in 2.83 seconds (process running for 4.105)
+2024-11-13T21:02:31.737+07:00  INFO 21140 --- [auth-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_AUTH-SERVICE/Asus_BinhPham.mshome.net:auth-service:8082 - registration status: 204
+]]></system-out>
+  <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (C:\Users\binhp\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.14.19\154da3a65b4f4a909d3e5bdec55d1b2b4cbb6ce1\byte-buddy-agent-1.14.19.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>
