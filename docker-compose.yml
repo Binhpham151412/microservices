@@ -1,0 +1,71 @@
+version: '3'
+services:
+  eureka-server:
+    container_name: eureka-server
+    build:
+      context: ./eureka-server
+      dockerfile: Dockerfile
+    ports:
+      - "8761:8761"
+    networks:
+      - my-network
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://eureka-server:8761/actuator/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+  config-server:
+    container_name: config-server
+    build:
+      context: ./config-server
+      dockerfile: Dockerfile
+    depends_on:
+      - eureka-server
+    environment:
+      SPRING_CLOUD_EUREKA_SERVER: "http://eureka-server:8761/eureka/"
+    networks:
+      - my-network
+    ports:
+      - "8888:8888"
+  api-gateway:
+    container_name: api-gateway
+    build:
+      context: ./api-gateway
+      dockerfile: Dockerfile
+    depends_on:
+      - eureka-server
+    environment:
+      SPRING_CLOUD_EUREKA_SERVER: "http://eureka-server:8761/eureka/"
+    networks:
+      - my-network
+    ports:
+      - "8081:8081"
+  auth-service:
+    container_name: auth-service
+    build:
+      context: ./auth-service
+      dockerfile: Dockerfile
+    depends_on:
+      - eureka-server
+    environment:
+      SPRING_CLOUD_EUREKA_SERVER: "http://eureka-server:8761/eureka/"
+    networks:
+      - my-network
+    ports:
+      - "8082:8082"
+  user-service:
+    container_name: user-service
+    build:
+      context: ./user-service
+      dockerfile: Dockerfile
+    depends_on:
+      - eureka-server
+    environment:
+      SPRING_CLOUD_EUREKA_SERVER: "http://eureka-server:8761/eureka/"
+    networks:
+      - my-network
+    ports:
+      - "8090:8090"
+networks:
+  my-network:
+    driver: bridge
